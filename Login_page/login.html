@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang=""en>
+  <head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content ="width=device-width, initial-scale=1.0">
+   <title>Login page</title>
+   <link rel ="stylesheet" href="loginstyle.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <img src="Images\login pic.png" alt="Image">
+      </div>
+      <div class="right">
+        <img src="Images\logo.png" alt="logo picture" class="logo"/>
+        <form class="form">
+          <input type="email" name="email" placeholder="Email Address*" required/>
+          <input type="password" name="password" placeholder="Password*" required/>
+          <button type="submit"  class="login"><a href="file:///D:/New%20rep/Edge-Project/Edge-Project/email%20status/index.html">Log In </a> </button>
+        </form>
+        <div class="divider">
+          <hr />
+          <span>or</span>
+          <hr />
+        </div>
+        <button class="google-login" onclick="handleGoogleLogin()">
+         Continue with
+         <img src="Images\google-logo.png" alt="Google-logo">
+        </button>
+      </div>
+    </div>
+    <script>
+      function handleGoogleLogin(){
+        window.location.href="https://accounts.google.com/signin";
+      }
+    </script>
+  </body>
+</html>

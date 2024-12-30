@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Plan</title>
+    <link rel="stylesheet" href="sam.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Team -->
+        <div class="team-column">
+            <p>Team A</p>
+            <div class="player-slot" onclick="selectPlayer('Player A1')">Player A1</div>
+            <div class="player-slot" onclick="selectPlayer('Player A2')">Player A2</div>
+            <div class="player-slot" onclick="selectPlayer('Player A3')">Player A3</div>
+            <div class="player-slot" onclick="selectPlayer('Player A4')">Player A4</div>
+            <div class="player-slot" onclick="selectPlayer('Player A5')">Player A5</div>
+        </div>
+
+        <!-- Game Plan -->
+        <div class="game-plan"><br><br>
+            <div class="overlay"></div>
+            <!-- Slots for players -->
+            <div class="slot-row">
+                <div class="slot-green" id="captain-slot">Captain</div>
+            </div>
+            <div class="slot-row">
+                <div class="slot" id="slot1"></div>
+                <div class="slot" id="slot2"></div>
+            </div>
+            <div class="slot-row">
+                <div class="slot" id="slot3"></div>
+                <div class="slot" id="slot4"></div>
+            </div>
+        </div>
+
+        <!-- Right Team -->
+        <div class="team-column">
+            <p>Team B</p>
+            <div class="player-slot" onclick="selectPlayer('Player B1')">Player B1</div>
+            <div class="player-slot" onclick="selectPlayer('Player B2')">Player B2</div>
+            <div class="player-slot" onclick="selectPlayer('Player B3')">Player B3</div>
+            <div class="player-slot" onclick="selectPlayer('Player B4')">Player B4</div>
+            <div class="player-slot" onclick="selectPlayer('Player B5')">Player B5</div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<!-- Swap Button Below -->
+  <div class="swap-button-container">
+    <button class="swap-button" onclick="swapTeams()">Swap Teams</button>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="branding">Game Planner</div>
+    <div class="notes">Click on a player to assign them to the game plan.</div>
+    <button class="leave-now">Leave Now</button>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

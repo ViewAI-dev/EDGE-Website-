@@ -1,0 +1,561 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+  padding: 0;
+  color: #fff;
+  font-family: Arial, sans-serif,sans-serif;
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    
+  background: linear-gradient(to bottom, #00ff00 0%, #00ff00 20%, transparent 60%);
+  padding-top: 0px; 
+  padding-bottom: 0px; 
+  text-align: center;
+  
+}
+
+
+.nav-bar {
+  
+  display: flex;
+  justify-content: space-between;
+  word-spacing: 60px;
+ 
+ padding-top:60px;
+  align-items: center;
+  padding: 0px 5%;
+}
+nav {
+  display: block; /* Moves nav links to the next line */
+  margin-top: 0px  ; /* Adds gap between the logo and navigation links */
+  
+}
+
+nav a {
+  color: #fff;  padding-top: 15px;
+  margin-top: 50px;
+
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  position: relative; /* Positioning for pseudo-element */
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: ''; /* Creates the line */
+  position: absolute;
+  bottom: -5px; /* Position the line below the text */
+  left: 0;
+  width: 0; /* Initially no width */
+  height: 3px; /* Height of the green line */
+  background-color: #00ff00; /* Green color */
+  transition: width 0.3s ease; /* Animation for the line */
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%; /* Full width on hover */
+}
+#games-section {
+  background-color: #28a745;
+}
+
+.logo {
+  width: 86px;
+  height: 70px;
+  padding-top: 15px;
+  margin-top: 40px;
+  /* transform: rotate(-15deg); */
+}
+
+.hover-container {
+  position: relative;
+  width: 80px; /* Initial small width */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Initial Icon Styling */
+.icon {
+  font-size: 30px;
+  color: #ffffff; /* Green icon */
+  position: absolute;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 40px;
+  height: 25px;
+  padding-right: 70px; /* Add padding to the left instead of right */
+  margin-right: 60px; /* Adjust margin to push the logo towards the left */
+  
+  cursor: pointer;
+}
+
+.user-icon {
+  width: 25px;
+    height: 25px;
+    padding-top: 15px;
+    margin-top: 60px;
+    background-color: #fff;
+    border-radius: 60%;
+    padding: 5px ;
+
+}
+/* Sign-In Button Styling */
+.sign-in-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Space between icon and text */
+  background-color: #00d400; /* Bright green */
+  color: #fff; /* White text */
+  font-size: 17px; /* Text size remains the same */
+  padding: 12px 10px; /* Padding remains the same */
+  margin: 15px;
+  border: none;
+  border-radius: 20px; /* Rounded button */
+  opacity: 0; /* Hidden by default */
+  transform: scale(0.8); /* Slightly shrunk */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Depth effect */
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  width: 100px; /* Reduced button width */
+  height: 25px; /* Reduced button height */
+  text-align: center;
+  cursor: pointer;
+}
+
+/* User Icon in Button */
+.sign-in-button i {
+  font-size: 15px; /* Icon size */
+}
+
+/* Hover Effect */
+.hover-container:hover .icon {
+  opacity: 0; /* Hide the initial icon */
+  transform: scale(0.6); /* Shrink effect */
+}
+
+.hover-container:hover .sign-in-button {
+  opacity: 1; /* Show the button */
+  transform: scale(1); /* Scale to full size */
+}
+
+  /* neon font style  */
+  .neon {
+    font-size:3rem;
+    font-weight: bold;
+    color: white; /* Default text color */
+    -webkit-text-stroke: 2px transparent; /* Default invisible border */
+    border: 2px solid transparent; /* Ensures no extra border is triggered */
+    padding: 0; /* Remove unnecessary padding */
+    display: inline; /* Make the text element inline */
+    transition: -webkit-text-stroke 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .neon:hover {
+    color: black; /* Make the text fill black */
+    -webkit-text-stroke: 2px #00ff00; /* Green border with increased thickness */
+    transform: scale(1.1); /* Slightly enlarge text */
+
+  }
+/* General Reset */
+
+
+/* Hover Container Styling */
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* WALLET Styling */
+.wallet {
+ 
+
+  font-weight: bold;
+  color: rgb(255, 255, 255); /* Black color for WALLET */
+  transition: color 0.3s ease;
+}
+
+/* Lock Icon Styling (Hidden by Default) */
+.lock-icon {
+  font-family: 'Material Symbols Outlined';
+  font-size: 23px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  color: red; /* Red color for the lock */
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect: Show Lock Icon */
+.hover-container:hover .wallet {
+  color: rgb(255, 254, 254); /* Keep WALLET black on hover */
+  background-color: #3b3c3b2d;
+  border-radius: 7px;
+}
+
+.hover-container:hover .lock-icon {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+  .neons  {
+    font-size:2rem;
+    
+    font-weight: bold;
+    color: white; /* Default text color */
+    -webkit-text-stroke: 1px transparent; /* Default invisible border */
+    border: 1px solid transparent; /* Ensures no extra border is triggered */
+    padding: 0; /* Remove unnecessary padding */
+    display: inline; /* Make the text element inline */
+    transition: -webkit-text-stroke 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .neons:hover  {
+    color: black; /* Make the text fill black */
+    -webkit-text-stroke: 1px #00ff00; /* Green border with increased thickness */
+    transform: scale(1.1); /* Slightly enlarge text */
+
+  }
+  .neons1  {
+    font-size:2rem;
+    font-weight: bold;
+    color: white; /* Default text color */
+    -webkit-text-stroke: 1px transparent; /* Default invisible border */
+    border: 1px solid transparent; /* Ensures no extra border is triggered */
+    padding: 0; /* Remove unnecessary padding */
+    display: inline; /* Make the text element inline */
+    transition: -webkit-text-stroke 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .neons1:hover  {
+    color: black; /* Make the text fill black */
+    -webkit-text-stroke: 1px #00ff00; /* Green border with increased thickness */
+    transform: scale(1.1); /* Slightly enlarge text */
+
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: left;
+    font-size:50px;
+    margin: 100px 4% 360px;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    color: #bbb;
+    font-size: 1rem;
+    max-width: 400px;
+    margin: 0px 0% 0px;
+  }
+  
+  /* Games Section */
+  .games-section {
+    text-align: center;
+    margin: 50px 5%;
+    position: relative;
+  }
+  
+  .games-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .games-section p {
+    font-size: 1rem;
+    color: #bbb;
+    margin-bottom: 30px;
+  }
+  
+  .games-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .game-card-1 {
+    position: relative;
+    width: 165px;
+    height: 330px;
+    background-image: url("LL\ Cover.png");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-out;
+  }
+  
+  .game-card-1:hover {
+    background-image: url("league-of-legends\ 1.png");
+    width: 360px;
+    height: 360px;
+  }
+  .game-card-1 .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #31b531; /* Semi-transparent background */
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth fade-in effect */
+  }
+  
+  .game-card-1:hover .text-overlay {
+    opacity: 1; /* Show text on hover */
+  }
+  .game-card-2 {
+    position: relative;
+    width: 165px;
+    height: 330px;
+    background-image: url("Valorant_cover\ 1.png");
+    background-size: cover;
+    border-radius: 20px;
+    background-position: center;
+    transition: background-image 0.8s ease-out;
+  }
+  
+  .game-card-2:hover {
+    background-image: url("Val\ Cover.png");
+    width: 360px;
+    height: 360px;
+  }.game-card-2 .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #31b531; /* Semi-transparent background */
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth fade-in effect */
+  }
+  
+  .game-card-2:hover .text-overlay {
+    opacity: 1; /* Show text on hover */
+  }
+  .game-card-3 {
+    position: relative;
+    width: 165px;
+    height: 330px;
+    background-image: url("CS.png");
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.8s ease-out;
+  }
+  .game-card-3:hover {
+    background-image: url("cs2-2\ 1.png");
+    width: 360px;
+    height: 360px;
+  }
+  .game-card-3 .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #31b531; /* Semi-transparent background */
+    padding: 8px 12px;
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease-out; /* Smooth fade-in effect */
+  }
+  
+  .game-card-3:hover .text-overlay {
+    opacity: 1; /* Show text on hover */
+  }
+  /* Background Grid Effect */
+  .games-div {
+    background-image: url("vector.png"), url("Vector-1.png"); /* Add the second image here */
+    background-size: cover, contain; /* Adjust sizes for each image */
+    background-position: center, center; /* Position both images at the center */
+    background-repeat: no-repeat, no-repeat; /* Prevent repeat of both images */
+    height: 100vh;
+    width: 1450px;
+    color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .element {
+    width: 1249px; /* Width of the element */
+    height: 904px; /* Height of the element */
+    background-image: url('Rectangle\ 628.png'); /* Path to your image */
+    background-size: cover; /* Adjust image size */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  
+/* Glowing Background */
+/* .glow-background {
+  position: absolute;
+  top: 600px 50% 50% 300px;
+  bottom: 800px 50% 50% 300px ;
+  top: 50%;
+  left: 50%;
+  right: 50px;
+  width: 900px ;
+  height: 400px;
+  padding-top: 90px;
+  
+  margin-top: 10px;
+ 
+  transform: translate(-50%, -50%) rotate(-10deg);
+  background: transparent;
+  border: 40px solid #199f19ba; 
+  /* box-shadow: 0 0 40px 20px rgba(31, 185, 31, 0.635); */
+
+}
+  /* box-shadow: inset 0 0 20px 10px rgba(62, 174, 62, 0.6), 
+  0 0 40px 20px rgba(49, 184, 49, 0.635); 
+  
+  z-index: -200000;  */
+ 
+/* Header */
+
+header {
+  margin: 20px 0; 
+}
+.login-text {
+  background-color: #000;
+  text-align: center;
+ 
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  margin: 100px 10% 260px;
+}
+/* Main Content */
+/* .center-content {
+  margin-top: 50px;
+ 
+} */
+.center-content   {
+  text-align:center;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.description {
+  text-align: center;
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+/* Steps Section */
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+}
+.step {
+  text-align: center;
+}
+.circle {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  /* transition: color 0.3s ease; */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  position: relative;
+}
+
+.circle:hover {
+  /* color: #00ff00; */
+   background-color: #00ff00; /* Green fill inside the circle */
+  box-shadow: 0 0 10px 8px rgba(101, 161, 101, 0.6);
+}
+
+.step h2 {
+  color: #0f0;
+  margin-bottom: 10px;
+}
+
+/* Login Popup */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-box {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #0f0;
+  text-align: center;
+  width: 300px;
+}
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+.popup-box button {
+  background: #0f0;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.popup-box button:hover {
+  background: white;
+}
